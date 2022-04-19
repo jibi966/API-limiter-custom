@@ -39,10 +39,10 @@ app.use("/limit", async (req, res) => {
     return res.status(500).send(e);
   }
 });
-
-app.listen(8080, async () => {
+const port=process.env.PORT;
+app.listen(port, async () => {
   try {
-    console.log("listening on port 8080");
+    console.log(`listening on port ${port}`);
   } catch (e) {
     console.log(e);
   }
